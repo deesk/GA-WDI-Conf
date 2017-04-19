@@ -1,7 +1,10 @@
 class SurveysController < ApplicationController
 
   def index
-  end 
+  end
+
+  def graph
+  end
 
   def report
     surveys = Survey.all
@@ -27,8 +30,23 @@ class SurveysController < ApplicationController
   end
 
   def create
+    survey = Survey.new
+    survey.q1 = params[:question_1]
+    survey.q2 = params[:question_2]
+    survey.q3 = params[:question_3]
+    if survey.save
+      render :thank_you
+    else
+      render :index
+    end
   end
 
-  def update
-  end
+
+
+
+
+
+
+
+
 end

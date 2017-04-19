@@ -1,0 +1,30 @@
+body {
+/*background-image: url("images/wood_wallpaper.jpg");*/
+background-size: 100%;
+}
+body .box {
+background-color: white;
+width: 750px;
+height: 600px;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+top: 50%;
+transform: translateY(15%);
+}
+h2 {
+  text-align: center;
+}
+.question_1 {
+  text-align: center;
+}
+.field {
+  display: block;
+  position: absolute;
+}
+input[type=radio] {
+ width: 20px; height: 20px;
+ -webkit-border-radius: 22px; -moz-border-radius: 22px; border-radius: 22px;
+ border: 1px solid #bbb;
+ vertical-align: middle;
+}
