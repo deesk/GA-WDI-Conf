@@ -28,3 +28,25 @@ input[type=radio] {
  border: 1px solid #bbb;
  vertical-align: middle;
 }
+
+.submit-btn {
+  display: block;
+  padding: 10px 20px;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 9px #999;
+  margin-left: 45%;
+}
+
+.submit-btn:hover {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
