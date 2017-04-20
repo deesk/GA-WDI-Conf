@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Survey.destroy_all
 
-Survey.create(q1: '20 and under', q2: '3 years and under', q3: 'YES');
-Survey.create(q1: 'Between 21 and 30', q2: 'Between 4 and 7 years', q3: 'NO');
-Survey.create(q1: 'Between 31 and 40', q2: '8 years and above', q3: 'YES');
-Survey.create(q1: '41 and above', q2: '3 years and under', q3: 'YES');
-Survey.create(q1: '20 and under', q2: 'Between 4 and 7 years', q3: 'NO');
+Survey.create(q1: '20 and under', q2: '3 years and under', q3: 'yes');
+Survey.create(q1: 'Between 21 and 30', q2: 'Between 4 and 7 years', q3: 'no');
+Survey.create(q1: 'Between 31 and 40', q2: '8 years and above', q3: 'yes');
+Survey.create(q1: '41 and above', q2: '3 years and under', q3: 'yes');
+Survey.create(q1: '20 and under', q2: 'Between 4 and 7 years', q3: 'yes');
