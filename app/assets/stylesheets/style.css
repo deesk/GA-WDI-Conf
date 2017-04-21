@@ -1,5 +1,4 @@
 body {
-/*background-image: url("images/wood_wallpaper.jpg");*/
 background-size: 100%;
 }
 body .box {
@@ -10,7 +9,10 @@ margin-left: auto;
 margin-right: auto;
 position: relative;
 top: 50%;
-transform: translateY(15%);
+padding: 2%;
+}
+.container {
+  margin: 0 auto;
 }
 h2 {
   text-align: center;
@@ -27,4 +29,40 @@ input[type=radio] {
  -webkit-border-radius: 22px; -moz-border-radius: 22px; border-radius: 22px;
  border: 1px solid #bbb;
  vertical-align: middle;
+}
+.submit-btn {
+  display: block;
+  padding: 10px 20px;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ED1111;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 9px #999;
+  margin-left: 45%;
+  margin-top: 10%;
+}
+.submit-btn:hover {
+  background-color: #EF3E3E;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.logo {
+  text-align: center;
+}
+@media screen (min-width: 600px) and (max-width: 768px) {
+    body { background: mistyrose; }
+    body .box{background-color: mistyrose;
+    width: 450px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 25%;
+    transform: translateY(15%)}
+    h2 { font-size:20px; }
 }

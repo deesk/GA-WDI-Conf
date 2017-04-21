@@ -1,4 +1,31 @@
 
+/*question no 1*/
+.q1graph {
+  border: 5px solid black;
+  margin-bottom: 10px;
+}
+.arc text {
+  font: 1em sans-serif;
+  text-anchor: middle;
+  fill: white;
+}
+
+.arc path {
+  stroke: #fff;
+}
+
+
+/*question no 3*/
 .q3Graph {
   border: 5px solid black;
+}
+
+g.hidden line,
+g.hidden path {
+  display: none;
+}
+
+g.x {
+  font-size: 1em;
+  font-weight: bold;
 }

@@ -8,17 +8,18 @@ class SurveysController < ApplicationController
 
   def report
     surveys = Survey.all
-
     data = {
       :q1 => [],
       :q2 => [],
       :q3 => []
     }
-
+    
+    # question 1
     q1_20under_count = 0
     q1_21to30_count = 0
     q1_31to40_count = 0
     q1_41above_count = 0
+
     surveys.each do |survey|
       if survey.q1 == '20under'
         q1_20under_count += 1
@@ -27,15 +28,32 @@ class SurveysController < ApplicationController
       elsif survey.q1 == '31to40'
         q1_31to40_count += 1
       elsif survey.q1 == '41above'
-        q1_41above_count += 1)
+        q1_41above_count += 1
       end
-      data[:q3][0] = q1_20under_count
-      data[:q3][1] = q1_21to30_count
-      data[:q3][2] = q1_31to40_count
-      data[:q3][3] = q3_yes_count
-
     end
+    data[:q1][0] = q1_20under_count
+    data[:q1][1] = q1_21to30_count
+    data[:q1][2] = q1_31to40_count
+    data[:q1][3] = q1_41above_count
+    data[:q1_sum] = data[:q1].reduce(:+)
 
+    #question2
+    q2_3under_count = 0
+    q2_4to7_count = 0
+    q2_8above_count = 0
+
+    surveys.each do |survey|
+      if survey.q2 == '3under'
+        q2_3under_count += 1
+      elsif survey.q2 == '4to7'
+        q2_4to7_count += 1
+      elsif survey.q2 == '8above'
+        q2_8above_count += 1
+      end
+    end
+    data[:q2][0] = q2_3under_count
+    data[:q2][1] = q2_4to7_count
+    data[:q2][2] = q2_8above_count
 
     # Question 3
     q3_yes_count = 0
@@ -51,7 +69,6 @@ class SurveysController < ApplicationController
     data[:q3][1] = q3_no_count
 
     render json: data
-
   end
 
   def create
@@ -66,7 +83,26 @@ class SurveysController < ApplicationController
     end
   end
 
+  def show
+    render :thank_you
+  end
 
+  def edit
+    @survey = Survey.find(params[:id])
+    render :edit
+  end
+
+  def update
+    @survey = Survey.find(params[:id])
+    @survey.q1 = params[:question_1]
+    @survey.q2 = params[:question_2]
+    @survey.q3 = params[:question_3]
+    if @survey.save
+      redirect_to '/thank_you'
+    else
+      render :edit
+    end
+  end
 
 
 

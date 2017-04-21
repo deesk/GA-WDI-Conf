@@ -1,0 +1,31 @@
+<div class="box">
+  <form class="question_1" action="/from/<%= @survey.id %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <h4 class="subtitle is-4" id="question_1">Question 1: <br><br>What is your age group?</h4>
+    <label for="20under">20 and under</label>
+    <input type="radio" name="question_1" value="20under">
+    <label for="21to30">Between 21 and 30</label>
+    <input type="radio" name="question_1" value="21to30">
+    <label for="31to40">Between 31 and 40</label>
+    <input type="radio" name="question_1" value="31to40">
+    <label for="41above">41 and above</label>
+    <input type="radio" name="question_1" value="41above">
+
+  <form class="question_2" action="/index" method="post">
+    <h4 class="subtitle is-4" id="question_2">Question 2: <br><br>How many years of programming experience have you got?</h4>
+    <label for="3under">3 years and under</label>
+    <input type="radio" name="question_2" value="3under">
+    <label for="4to7">Between 4 and 7 years</label>
+    <input type="radio" name="question_2" value="4to7">
+    <label for="8above">8 years and above</label>
+    <input type="radio" name="question_2" value="8above">
+
+  <form class="question_3" action="/index" method="post">
+    <h4 class="subtitle is-4" id="question_3">Question 3: <br><br>Was the speaker engaging?</h4>
+    <label for="yes">YES</label>
+    <input type="radio" name="question_3" value="yes">
+    <label for="no">NO</label>
+    <input type="radio" name="question_3" value="no">
+    
+  <button class="submit-btn">Submit</button>
+</div>

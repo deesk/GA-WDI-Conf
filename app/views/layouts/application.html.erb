@@ -3,13 +3,18 @@
   <head>
     <title>WdiConfSurvey</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
   </head>
-
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="logo">
+        <%= image_tag("GA_logo.png") %>
+        <h2>WDI 11 Conference Survey</h2>
+        <h4>Helping to serve you better</h4>
+        <hr>
+      </div>
+      <%= yield %>
+    </div>
   </body>
 </html>
