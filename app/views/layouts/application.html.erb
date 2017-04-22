@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>WdiConfSurvey</title>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Tangerine:700" rel="stylesheet">
+
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -10,11 +12,11 @@
     <div class="container">
       <div class="logo">
         <%= image_tag("GA_logo.png") %>
-        <div class="title">
-        <h2>WDI Conference 2017 Survey</h2>
-        <h4>Help Us To Serve You Better </h4>
 
-        </div>
+        <h2 class="title">WDI Conference 2017 Survey</h2>
+        <h4 class="slogan">Help Us To Serve You Better </h4>
+
+
       </div>
 
       <%= yield %>
