@@ -6,12 +6,12 @@ $.ajax({
 }).done(function(data){
   console.log(data);
 
+  $('.total-respos').text(data.q1_sum);
+
+
   //Question 1: pie chart
 
   var q1Data = data.q1;
-  console.log(q1Data);
-
-  // var q1Options = ["Under 20", "Between 21 to 30","Between 31 to 40", "41 Above" ];
 
     var q1Data = [
       { age: "Under 20",         count: q1Data[0] },
@@ -55,6 +55,55 @@ console.log(q1Data);
       .attr("dy", "0.35em")
       .text(function(d) { return d.data.count; })
 
+
+// Question 2:
+var q2Data = data.q2.map(function(i){
+  return i * 8;
+});
+var height = 320;
+var margin = {left:50,right:10,top:10, bottom:0}
+var q2Opt = ["3 years and under","Between 4 and 7 years","8 years and above"]
+//color collection
+var cat20 = d3.schemeCategory20;
+//vertical axis in pixels
+var y = d3.scaleLinear()
+        .domain([0,20])
+        .range([240,80]);
+// axis y generator
+var yAxis = d3.axisLeft(y);
+
+var x = d3.scaleOrdinal()
+        .domain(q2Opt)
+        .range([70,175]);
+var xAxis = d3.axisBottom(x);
+
+var svg = d3.select(".q2graph")
+  .append('svg')
+  .attr("height",height)
+  .attr("width","100%");
+
+var chartGroup = svg.append("g")
+  .attr("transform", "translate("+margin.left+","+margin.top+")")
+
+// setting attribute to rectangle
+chartGroup.selectAll("rect")
+.data(q2Data)
+.enter().append("rect")
+  .attr("height", function(d){return d;})
+  .attr("width","50")
+  .attr("x",function(d,i){return 40 + (100 * i);}) //50+
+  // browers draw bar downwords(positioning)
+  .attr("y",function(d,i){return 241-(d);})
+  .attr("fill",function(d,i){ return cat20[i];});
+
+chartGroup.append("g")
+  .attr("class","axis y")
+  .call(yAxis);
+
+chartGroup.append("g")
+  .attr("class","axix q2-label hidden")
+  .attr("transform", "translate(0,240)")//240
+  .call(xAxis);
 
 
 
@@ -110,5 +159,8 @@ console.log(q1Data);
     .attr("class","axix x hidden")
     .attr("transform", "translate(0,240)")//240
     .call(xAxis);
+
+
+
 
 });

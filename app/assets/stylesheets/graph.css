@@ -1,6 +1,8 @@
 
 /*question no 1*/
-.q1graph {
+.q1graph,
+.q2graph
+ {
   border: 5px solid black;
   margin-bottom: 10px;
 }
@@ -13,6 +15,13 @@
 .arc path {
   stroke: #fff;
 }
+
+/*Question 2*/
+
+.q2-label {
+  font-size: 0.7em;
+}
+
 
 
 /*question no 3*/

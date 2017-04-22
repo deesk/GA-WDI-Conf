@@ -3,7 +3,7 @@ class SurveysController < ApplicationController
   def index
   end
 
-  def graph
+  def graph    
   end
 
   def show
