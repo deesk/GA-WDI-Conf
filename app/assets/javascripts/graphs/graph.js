@@ -1,6 +1,5 @@
 console.log('Graph Page')
 
-
 $.ajax({
   url: "/report"
 }).done(function(data){
@@ -8,9 +7,7 @@ $.ajax({
 
   $('.total-respos').text(data.q1_sum);
 
-
   //Question 1: pie chart
-
   var q1Data = data.q1;
 
     var q1Data = [
