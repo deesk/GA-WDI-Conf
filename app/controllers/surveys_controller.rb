@@ -63,6 +63,8 @@ class SurveysController < ApplicationController
     data[:q1][2] = q1_31to40_count
     data[:q1][3] = q1_41above_count
     data[:q1_sum] = data[:q1].reduce(:+)
+    data[:q1_inPercent] = data[:q1].collect{|q| q*100/data[:q1_sum]}
+
 
     #question2
     q2_3under_count = 0
@@ -109,9 +111,6 @@ class SurveysController < ApplicationController
       render :index
     end
   end
-
-
-
 
 
 
