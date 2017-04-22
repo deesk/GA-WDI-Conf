@@ -6,6 +6,32 @@ class SurveysController < ApplicationController
   def graph
   end
 
+  def show
+    render :thank_you
+  end
+
+  def edit
+    @survey = Survey.find(params[:id])
+    render :form
+  end
+
+  def update
+    @survey = Survey.find(params[:id])
+
+    if @survey.q1 == nil && @survey.q2 == nil && @survey.q3 == nil
+      @survey.q1 = params[:question_1]
+      @survey.q2 = params[:question_2]
+      @survey.q3 = params[:question_3]
+      if @survey.save
+        redirect_to '/thank_you'
+      else
+        render :form
+      end
+    else
+      render :already_done
+    end
+  end
+
   def report
     surveys = Survey.all
     data = {
@@ -13,7 +39,7 @@ class SurveysController < ApplicationController
       :q2 => [],
       :q3 => []
     }
-    
+
     # question 1
     q1_20under_count = 0
     q1_21to30_count = 0
@@ -21,6 +47,7 @@ class SurveysController < ApplicationController
     q1_41above_count = 0
 
     surveys.each do |survey|
+
       if survey.q1 == '20under'
         q1_20under_count += 1
       elsif survey.q1 == '21to30'
@@ -83,26 +110,7 @@ class SurveysController < ApplicationController
     end
   end
 
-  def show
-    render :thank_you
-  end
 
-  def edit
-    @survey = Survey.find(params[:id])
-    render :edit
-  end
-
-  def update
-    @survey = Survey.find(params[:id])
-    @survey.q1 = params[:question_1]
-    @survey.q2 = params[:question_2]
-    @survey.q3 = params[:question_3]
-    if @survey.save
-      redirect_to '/thank_you'
-    else
-      render :edit
-    end
-  end
 
 
 
