@@ -3,32 +3,32 @@ class SurveysController < ApplicationController
   def index
   end
 
-  def graph    
+  def graph
   end
 
   def show
     render :thank_you
   end
 
+  def completed
+  end
+
   def edit
     @survey = Survey.find(params[:id])
+    if !(@survey.q1.nil?)
+      redirect_to '/completed'
+    else
     render :form
   end
 
   def update
     @survey = Survey.find(params[:id])
-
-    if @survey.q1 == nil && @survey.q2 == nil && @survey.q3 == nil
       @survey.q1 = params[:question_1]
       @survey.q2 = params[:question_2]
       @survey.q3 = params[:question_3]
       if @survey.save
         redirect_to '/thank_you'
-      else
-        render :form
       end
-    else
-      render :already_done
     end
   end
 

@@ -1,4 +1,14 @@
-body {
+
+.wrapper {
+  margin: 0 auto;
+
+  border: 1px solid black;
+  text-align: center;
+}
+
+
+
+/*body {
 background-size: 100%;
 }
 body .box {
@@ -72,4 +82,4 @@ input[type=radio] {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}
+}*/
