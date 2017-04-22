@@ -39,11 +39,13 @@ input[type=radio] {
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #ED1111;
+
+  background-color: #4CAF50;
   border: none;
   border-radius: 6px;
   box-shadow: 0 9px #999;
   margin-left: 45%;
+
   margin-top: 10%;
 }
 .submit-btn:hover {
@@ -65,4 +67,9 @@ input[type=radio] {
     top: 25%;
     transform: translateY(15%)}
     h2 { font-size:20px; }
+}
+.submit-btn:hover {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
