@@ -112,6 +112,8 @@ class SurveysController < ApplicationController
     end
   end
 
+  def login
+  end
 
 
 end

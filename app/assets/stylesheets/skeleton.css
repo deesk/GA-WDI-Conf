@@ -38,9 +38,11 @@
 }
 
 .box {
-  margin-left: 20%;
   display: inline-block;
-  width: 40%;
+  left: 25%;
+  position: relative;
+  width: 50%;
+
 }
 .column,
 .columns {
@@ -50,21 +52,225 @@
 }
 
 .logo {
-  text-align: center;}
+  text-align: center;
+  padding: 10%
+}
 
 label {
   display: inline-block;
+  padding: 2%;
 }
 
 .title {
   font-family: 'Bungee Inline', cursive;
+  font-size: 2em;
+}
+
+.admin {
+  text-align: center;
+}
+
+.s-container{
+width: 50%;
+margin-left: 25%;
+padding: 1%
 }
 
 .slogan {
   font-family: 'Tangerine', cursive;
-  font-size: 3em;
+  font-size: 2em;
+  text-align: center;
+}
+
+.thank_box {
+  padding: 1%;
+  text-align: center;
+}
+
+.thank_you {
+  font-size: 2em;
+  text-align: center;
+}
+
+.question_1 {
+  padding: 1%;
+  text-align: center;
+}
+
+.question_2 {
+  padding: 1%;
+  text-align: center;
+}
+
+.question_3 {
+  padding: 1%;
+  text-align: center;
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 2%;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #fe0033;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 3px #999;
+}
+
+.submit-btn:hover {
+  background-color: #b9304c;
+}
+
+.login-btn {
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #fe0033;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 3px #999;
+}
+
+.login-btn:hover {
+  background-color: #b9304c;
+}
+
+.border {
+  border: 2px solid;
+}
+
+.completed {
+  text-align: center;
+  padding: 1%
 }
 @media screen and (max-width: 660px) {
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 0 5px;
+    box-sizing: border-box;
+  }
 
+  .box {
+    display: inline-block;
+    left: 25%;
+    position: relative;
+    width: 50%;
 
+  }
+  .column,
+  .columns {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    text-align: center;
+    padding: 10%
+  }
+
+  label {
+    display: inline-block;
+    padding: 2%;
+  }
+
+  .title {
+    font-family: 'Bungee Inline', cursive;
+    font-size: 2em;
+  }
+
+  .s-container{
+  width: 50%;
+  margin-left: 25%;
+  padding: 1%
+  }
+
+  .slogan {
+    font-family: 'Tangerine', cursive;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .admin {
+    text-align: center;
+  }
+
+  .thank_box {
+    padding: 1%;
+    text-align: center;
+  }
+
+  .thank_you {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .question_1 {
+    padding: 1%;
+    text-align: center;
+  }
+
+  .question_2 {
+    padding: 1%;
+    text-align: center;
+  }
+
+  .question_3 {
+    padding: 1%;
+    text-align: center;
+  }
+
+  .submit-btn {
+    display: inline-block;
+    padding: 2%;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #fe0033;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px #999;
+  }
+
+  .submit-btn:hover {
+    background-color: #b9304c;
+  }
+
+  .login-btn {
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #fe0033;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px #999;
+  }
+
+  .login-btn:hover {
+    background-color: #b9304c;
+  }
+
+  .border {
+    border: 1px solid;
+  }
+
+  .completed {
+    text-align: center;
+    padding: 1%
+  }
 }
