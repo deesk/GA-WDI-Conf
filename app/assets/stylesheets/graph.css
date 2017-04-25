@@ -1,7 +1,8 @@
 
 .dashboard {
-  font-size: 3em;
-  color: #043d5b;
+  margin-top: 4%;
+  font-size: 4em;
+  color: #2c3e50;
   text-align: center;
   font-family: 'Bungee Inline', cursive;
 }
@@ -17,7 +18,8 @@
   text-align: center;
   color: #e74c3c;
   font-family: 'Bungee Inline', cursive;
-  margin: 20px 0;
+  margin: 0 0 20px 0;
+  font-size: 2em;
 }
 
 .total-respos {

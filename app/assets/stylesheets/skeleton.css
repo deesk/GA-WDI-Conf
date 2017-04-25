@@ -32,18 +32,37 @@
   position: relative;
   width: 100%;
   max-width: 960px;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 0 20px;
   box-sizing: border-box;
 }
 
 .box {
+  /*border: 1px solid gray;*/
+  box-shadow: 10px 10px 10px 10px #888888;
+  margin: 5%;
   display: inline-block;
-  left: 25%;
   position: relative;
-  width: 50%;
+  width: 90%;
+}
+
+label {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #34495e;
+}
+
+input {
+  height: 15px;
+  width: 20px;
+}
+
+.box h4 {
+  font-size: 1.5em;
+  color: #e74c3c;
 
 }
+
 .column,
 .columns {
   width: 100%;
@@ -51,9 +70,24 @@
   box-sizing: border-box;
 }
 
+.logo img {
+  height: 150px;
+
+}
+.logo h2 {
+  color: white;
+  background-color: #34495e;
+}
+
 .logo {
   text-align: center;
-  padding: 10%
+}
+
+.bg-img {
+  background-image: url("conf-bg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
 }
 
 label {
@@ -107,18 +141,26 @@ padding: 1%
   text-align: center;
 }
 
+.completed h1 {
+  font-size: 2em;
+  color: #c0392b;
+  font-family: 'Bungee Inline', cursive;
+}
+
 .submit-btn {
   display: inline-block;
-  padding: 2%;
-  font-size: 1em;
+  padding: 1.5%;
+  font-size: 1.2em;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background-color: #fe0033;
+  font-weight: bold;
+  background-color: #34495e;
   border: none;
   border-radius: 10px;
   box-shadow: 0 3px #999;
+  width: 20%;
 }
 
 .submit-btn:hover {
@@ -162,9 +204,8 @@ padding: 1%
 
   .box {
     display: inline-block;
-    left: 25%;
     position: relative;
-    width: 50%;
+    width: 90%;
 
   }
   .column,
@@ -176,7 +217,7 @@ padding: 1%
 
   .logo {
     text-align: center;
-    padding: 10%
+    margin: 10px auto;
   }
 
   label {

@@ -152,12 +152,11 @@ var labelColor = "#2c3e5";
 
   //Question 3: simple bar chart
   var ratio = 5;
-  //increment by 8times for each data
-
+  //increment by 11times for each data
   var q3Data = data.q3.map(function(i){
     return i * 11;
   });
-  var height = 320;
+  var height = 359;
   var margin = {left:130,right:10,top:10, bottom:0}
   var q3Opt = ["Yes","No"]
 
